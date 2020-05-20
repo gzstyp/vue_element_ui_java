@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <menu name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>汽车销售管理</title>
+    <link rel="stylesheet" href="styles/element-ui/element-ui.css">
+    <link rel="stylesheet" href="styles/element-ui/page.index.css">
+</head>
+<body>
+    <div id="app">
+        <div class="head">
+            汽车销售管理
+        </div>
+        <div class="body">
+            <el-row>
+                <el-col :span="24">
+                    {{searchForm.carName}}
+                    <el-col :span="18" :push="3">
+                        <el-form label-width="80px">
+                        </el-form>
+                    </el-col>
+                </el-col>
+            </el-row>
+        </div>
+    </div>
+<!-- import Vue before Element -->
+<script src="javascript/element-ui/vue.min.js"></script>
+<!-- import JavaScript -->
+<script src="javascript/element-ui/index.js"></script>
+<script src="javascript/element-ui/axios.min.js"></script>
+<script src="javascript/page/http.js"></script>
+<script src="javascript/page/car.js"></script>
+<script type="text/javascript">
+    new Vue({
+        el : '#app',
+        data : function(){
+            return {
+                searchForm : {
+                    carName : '小轿车'
+                }
+            }
+        },
+    });
+</script>
+</body>
+</html>
