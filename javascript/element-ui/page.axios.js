@@ -42,10 +42,14 @@ new Vue({
             userIndex : 0
         }
     },
-    /*初始化*/
+    /*html加载完成之前，执行。执行顺序：父组件-子组件,在模板渲染成html前调用，即通常初始化某些属性值，然后再渲染成视图。*/
+    created : function(){
+    },
+    /*页面初始化方法,html加载完成后执行。执行顺序：子组件-父组件,在模板渲染成html后调用，通常是初始化页面完成后，再对html的dom节点进行一些需要的操作*/
     mounted : function(){
         this.getWmsData();
     },
+    /*事件方法执行*/
     methods : {
         fnMessage : function(msg){
             this.$message(msg);
