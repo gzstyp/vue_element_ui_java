@@ -122,7 +122,7 @@ new Vue({
                 gender : '',
                 phoneNum : '',
                 birthday : ''
-            }
+            };
             this.fnMsgSuccess('添加成功');
         },
         handleEdit : function(index,item){
@@ -136,7 +136,7 @@ new Vue({
                 gender : item.gender,
                 phoneNum : item.phoneNum,
                 birthday : item.birthday
-            }
+            };
             this.dialogVisible = true;
         },
         handleDelete : function(index,row){
